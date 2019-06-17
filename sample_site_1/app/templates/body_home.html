@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="section">
+    <div class="box">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input has-text-centered" type="search" placeholder="Type here...">
+        </div>
+        <div class="control">
+          <a class="button is-info">Search</a>
+        </div>
+      </div>
+    </div>
+    <div class="row columns is-multiline">
+      {% for i in range(10) %}
+        {% set
+          data={
+            image: 'https://picsum.photos/600/400?random=' + i,
+            avatar: 'https://randomuser.me/api/portraits/women/' + i +'.jpg',
+            name: 'Ingrid',
+            description: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.'
+          }
+        %}
+        {% include 'tile.html' %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

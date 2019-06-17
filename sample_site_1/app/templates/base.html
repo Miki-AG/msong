@@ -1,0 +1,14 @@
+{% extends "base_simple_bulma.html" %}
+
+{% block title %}Project 1{% endblock %}
+
+{% set theme = "cosmo" %}
+{% block theme %}{% include 'themes.html' %}{% endblock %}
+
+{% block header %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block footer %}
+{% include 'footer.html' %}
+{% endblock %}
